@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="forms" displayName="forms" projectFiles="true">
+        <itemPath>forms/HelpPanel.cpp</itemPath>
+        <itemPath>forms/HelpPanel.h</itemPath>
+      </logicalFolder>
+      <itemPath>AppFrame.cpp</itemPath>
+      <itemPath>AppFrame.h</itemPath>
+      <itemPath>CrowdMaker.cpp</itemPath>
+      <itemPath>CrowdMaker.h</itemPath>
+      <itemPath>HelpFrame.cpp</itemPath>
+      <itemPath>HelpFrame.h</itemPath>
+      <itemPath>Icon.cpp</itemPath>
+      <itemPath>Icon.h</itemPath>
+      <itemPath>ImageDB.cpp</itemPath>
+      <itemPath>ImageDB.h</itemPath>
+      <itemPath>ImageTree.cpp</itemPath>
+      <itemPath>ImageTree.h</itemPath>
+      <itemPath>MakerFrame.cpp</itemPath>
+      <itemPath>MakerFrame.h</itemPath>
+      <itemPath>PeopleFinder.cpp</itemPath>
+      <itemPath>PeopleFinder.h</itemPath>
+      <itemPath>Settings.cpp</itemPath>
+      <itemPath>Settings.h</itemPath>
+      <itemPath>Tools.cpp</itemPath>
+      <itemPath>Tools.h</itemPath>
+      <itemPath>const.h</itemPath>
+      <itemPath>crowd3.cpp</itemPath>
+      <itemPath>crowd3.h</itemPath>
+      <itemPath>wxImagePanel.cpp</itemPath>
+      <itemPath>wxImagePanel.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>/mnt/F/Projects/Crowd3/forms</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/wx-2.8</pElem>
+            <pElem>/usr/include/c++/4.6</pElem>
+            <pElem>/usr/include/i386-linux-gnu</pElem>
+            <pElem>/usr/lib/wx/include/gtk2-unicode-release-2.8</pElem>
+          </incDir>
+          <commandLine>`wx-config --cflags --cxxflags`</commandLine>
+          <preprocessorList>
+            <Elem>__cplusplus</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crowd3</output>
+          <linkerAddLib>
+            <pElem>/usr/lib/gtk-2.0/2.10.0</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs opencv`</linkerOptionItem>
+            <linkerOptionItem>`wx-config --libs --cxxflags --debug=no`</linkerOptionItem>
+            <linkerLibLibItem>sqlite3</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Debian</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/crowd3.xml"
+                            from="crowd3.xml"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/beach.jpg"
+                            from="backgrounds/beach.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/lake.jpg"
+                            from="backgrounds/lake.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/ocean.jpg"
+                            from="backgrounds/ocean.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/sunset.jpg"
+                            from="backgrounds/sunset.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/trees.jpg"
+                            from="backgrounds/trees.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+        <packInfoList>
+          <packInfoListElem name="Package" value="crowd3" mandatory="true"/>
+          <packInfoListElem name="Version"
+                            value="0.6.pre-alpha dont build this packge"
+                            mandatory="true"/>
+          <packInfoListElem name="Architecture" value="i386" mandatory="false"/>
+          <packInfoListElem name="Maintainer"
+                            value="Dennis Damico &lt;dennis508@yahoo.com>"
+                            mandatory="false"/>
+          <packInfoListElem name="Installed-Size" value="5000000" mandatory="false"/>
+          <packInfoListElem name="Homepage"
+                            value="http://crowd3.sourceforge.net"
+                            mandatory="false"/>
+          <packInfoListElem name="Section" value="graphics" mandatory="false"/>
+          <packInfoListElem name="Description"
+                            value="crowd3 crowd scene maker\n crowd3 creates images of crowd scenes using the people in your photo collection."
+                            mandatory="false"/>
+        </packInfoList>
+      </packaging>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <stripSymbols>true</stripSymbols>
+          <incDir>
+            <pElem>/usr/include</pElem>
+            <pElem>/usr/include/wx-2.8</pElem>
+            <pElem>/usr/include/c++/4.6</pElem>
+            <pElem>/usr/include/i386-linux-gnu</pElem>
+            <pElem>/usr/lib/wx/include/gtk2-unicode-release-2.8</pElem>
+          </incDir>
+          <commandLine>`wx-config --cflags --cxxflags`</commandLine>
+          <preprocessorList>
+            <Elem>__cplusplus</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/crowd3</output>
+          <linkerAddLib>
+            <pElem>/usr/lib/gtk-2.0/2.10.0</pElem>
+          </linkerAddLib>
+          <stripSymbols>true</stripSymbols>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs opencv`</linkerOptionItem>
+            <linkerOptionItem>`wx-config --libs --cxxflags --debug=no`</linkerOptionItem>
+            <linkerLibLibItem>sqlite3</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <packaging>
+        <packType>Debian</packType>
+        <packFileList>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/bin/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/crowd3.xml"
+                            from="crowd3.xml"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/beach.jpg"
+                            from="backgrounds/beach.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/lake.jpg"
+                            from="backgrounds/lake.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/ocean.jpg"
+                            from="backgrounds/ocean.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/sunset.jpg"
+                            from="backgrounds/sunset.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/trees.jpg"
+                            from="backgrounds/trees.jpg"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}local/share/crowd3/crowd3.png"
+                            from="icons/crowd3.png"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+        </packFileList>
+        <packInfoList>
+          <packInfoListElem name="Package" value="crowd3" mandatory="true"/>
+          <packInfoListElem name="Version" value="1.0" mandatory="true"/>
+          <packInfoListElem name="Architecture" value="i386" mandatory="false"/>
+          <packInfoListElem name="Maintainer"
+                            value="Dennis Damico &lt;dennis508@yahoo.com>"
+                            mandatory="false"/>
+          <packInfoListElem name="Installed-Size" value="3500000" mandatory="false"/>
+          <packInfoListElem name="Homepage"
+                            value="http://crowd3.sourceforge.net"
+                            mandatory="false"/>
+          <packInfoListElem name="Section" value="graphics" mandatory="false"/>
+          <packInfoListElem name="Description"
+                            value="crowd3 crowd scene maker\n crowd3 creates images of crowd scenes using the people in your photo collection."
+                            mandatory="false"/>
+          <packInfoListElem name="Depends"
+                            value="libstdc++6 (>=4.6.1), libgcc1 (>=1:4.6.1), libc6 (>=2.13), libsqlite3-0 (>=3.7.7), libwxbase2.8-0 (>=2.8.11), libwxgtk2.8-0 (>=2.8.11), libopencv-core2.3 (>=2.3.1), libopencv-imgproc2.3 (>=2.3.1), libopencv-highgui2.3 (>=2.3.1), libopencv-objdetect2.3 (>=2.3.1), libopencv-flann2.3 (>=2.3.1), libopencv-features2d2.3 (>=2.3.1), libopencv-calib3d2.3 (>=2.3.1)"
+                            mandatory="false"/>
+        </packInfoList>
+      </packaging>
+    </conf>
+  </confs>
+</configurationDescriptor>
