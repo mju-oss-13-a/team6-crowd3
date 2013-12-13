@@ -28,7 +28,7 @@
  */
 
 #include "MakerFrame.h"
-
+#include "mmsystem.h"
 /** Initialize the background image size choices. */
 wxString sizeChoices[] = {
     _T("1280x800"),        // 16:10 - default
@@ -298,6 +298,7 @@ void MakerFrame::make(wxMouseEvent &event) {
         // Create and display the crowd image.
         cm->makeCrowdImage(this);
         imagePanel->setImage(cm->getCrowdImage());
+	sndPlaySound("C:\User\Desktop\"AnyPang_Game" ,SND_ASYNCISND_NODEFAULT);
     }
     catch (Exception e) {
         Tools::log(Tools::str2wx(e.msg) + _T("\nError on Make operation"));
@@ -309,6 +310,7 @@ void MakerFrame::shuffle(wxMouseEvent &event) {
     try {
         cm->shuffle(this);
         imagePanel->setImage(cm->getCrowdImage());
+	sndPlaySound("C:\User\Desktop\"AnyPang_Game" ,SND_ASYNCISND_NODEFAULT);
     }
     catch (Exception e) {
         Tools::log(Tools::str2wx(e.msg) + _T("\nError on Shuffle operation"));
