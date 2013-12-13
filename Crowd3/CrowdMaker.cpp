@@ -124,10 +124,10 @@ wxInt32 CrowdMaker::getPeopleCount() {
 void CrowdMaker::setPerspective(bool perSetting) {
     myUsingPer = perSetting;
     if (myUsingPer) {
-        myPerFactor = 0.9; // perspective
+        myPerFactor = 0.7; // perspective
     }
     else {
-        myPerFactor = 1.0; // no perspective
+        myPerFactor = 1.3; // no perspective
     }
 }
 
